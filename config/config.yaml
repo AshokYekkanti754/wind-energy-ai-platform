@@ -1,0 +1,40 @@
+project:
+  name: "Wind Farm AI Energy Intelligence Platform"
+  stage: "prototype"
+
+paths:
+  raw_dir: "data/raw/Datasets"
+  interim_dir: "data/interim"
+  processed_dir: "data/processed"
+  models_dir: "models"
+  figures_dir: "reports/figures"
+  logs_dir: "logs"
+
+raw_files:
+  long_term_climate: "Dataset-4 Long term wind climate dataset 20 years 10min.csv"
+  power_curve: "Dataset-5 Turbine power curve dataset.csv"
+  scada: "Dataset-6  Wind farm scada 1year.csv"
+  alarms: "Dataset-7 Turbine alarm event dataset 3year 50turbines 150k events.csv"
+  maintenance: "Dataset-8  Wind turbine maintenance dataset 3year 50turbines 25000 records.csv"
+  grid_curtailment: "Dataset-9 Grid and Curtailment dataset 10000 rows.csv"
+  gis_terrain: "Dataset-10 GIS Terrain Dataset.csv"
+  layout_actual: "Dataset-11 (A) Actual Wind Farm Layout.csv"
+  layout_candidates: "Dataset-11 (B) AI Candidate Layouts 10000.csv"
+  layout_position_features: "Dataset-11 (C) Layout Position Features 10000.csv"
+  weather_forecast: "Dataset-12 weather forecast 10000 rows.csv"
+  simple_flat_dataset: "wind_energy_dataset_100- 10000 Row.csv"
+
+modeling:
+  chronological_split:
+    train: 0.7
+    val: 0.15
+    test: 0.15
+  target_variables:
+    - active_power_kw
+  random_seed: 42
+
+turbine_defaults:
+  rated_power_kw: 3000
+  cut_in_speed_mps: 3
+  rated_speed_mps: 11
+  cut_out_speed_mps: 25

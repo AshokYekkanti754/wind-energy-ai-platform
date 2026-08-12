@@ -1,0 +1,37 @@
+# Core
+pandas==2.2.2
+numpy==1.26.4
+scipy==1.13.1
+
+# ML - baseline models (Day 3-4)
+scikit-learn==1.5.1
+xgboost==2.1.1
+lightgbm==4.5.0
+joblib==1.4.2
+
+# Deep learning (optional stretch goal - Day 3)
+# torch==2.4.0
+
+# Optimization (Day 7)
+pulp==2.8.0
+
+# GenAI Copilot (Day 5)
+anthropic==0.34.2
+python-dotenv==1.0.1
+
+# Dashboard (Day 8)
+streamlit==1.38.0
+plotly==5.24.0
+
+# Visualization
+matplotlib==3.9.2
+seaborn==0.13.2
+
+# Notebook environment
+jupyter==1.0.0
+ipykernel==6.29.5
+nbformat==5.10.4
+
+# Utilities
+pyyaml==6.0.2
+tqdm==4.66.5
